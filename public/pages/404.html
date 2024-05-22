@@ -1,0 +1,32 @@
+const express = require('express');
+const path = require('path');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Serve static files from the 'public' directory
+app.use(express.static(path.join(__dirname, 'public')));
+
+// Route for the landing page (index.html)
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+// Route for the notes page (notes.html)
+app.get('/notes', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'notes.html'));
+});
+
+// API routes (example)
+const notesRouter = require('./notesRoutes');
+app.use('/api/notes', notesRouter);
+
+// Catch-all route to return 404 page
+app.get('*', (req, res) => {
+  res.status(404).sendFile(path.join(__dirname, 'public', 'pages', '404.html'));
+});
+
+// Start the server
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});

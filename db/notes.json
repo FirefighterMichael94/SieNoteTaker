@@ -1,0 +1,22 @@
+[
+    {
+        "topic": "UX",
+        "note": "Don't use comic sans",
+        "note_id": "3fe5d166-2f9e-4e3d-87a7-25a561207c6c"
+    },
+    {
+        "topic": "UI",
+        "note": "Make your application accessible by adding alt properties to elements",
+        "note_id": "ca0616fa-f603-4d85-a9c6-fa62c73a9bf9"
+    },
+    {
+        "note": "Don't use three different fonts on the same page",
+        "topic": "UX",
+        "note_id": "c83c28af-9197-4f2f-b119-03236ecfc0b6"
+    },
+    {
+        "note": "love the things that you do. Love the things you love.",
+        "topic": "UX",
+        "note_id": "af31f37d-a5f8-47ff-8231-f362c7365d30"
+    }
+]
